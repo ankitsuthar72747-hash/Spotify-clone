@@ -21,10 +21,9 @@ async function getSongs(folder) {
     let response = await fetch("songs.json");
     let data = await response.json();
 
-    songs = data[folder];
+    songs = data[folder] || [];
 
     return songs;
-
 }
 
 // async function getSongs(folder) {
